@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Test</title>
+    <!-- CSS 스타일 추가 -->
+    <style>
+        /* body 전체를 flex로 중앙 정렬 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* 질문 컨테이너에서 배경, 테두리, 그림자 제거 */
+        #question-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            width: 600px; /* 컨테이너 크기 */
+        }
+
+        /* 제목 중앙 정렬 */
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 질문 제목 */
+        .question-box {
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 선택지들을 감싸는 컨테이너 */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        /* 각 선택지를 직사각형 안에 넣기 */
+        .option-box {
+            width: 500px; /* 더 늘어난 가로 길이 */
+            height: 80px; /* 고정된 세로 길이 */
+            background-color: #e0e0e0;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
+            text-align: center;
+            line-height: 50px; /* 텍스트 세로 중앙 정렬 */
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 선택지 hover 시 효과 */
+        .option-box:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* 라디오 버튼 숨기기 */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 선택된 상태에서 배경색 변경 */
+        input[type="radio"]:checked + .option-box {
+            background-color: #b0c4de;
+            border-color: #5c9ded;
+        }
+    </style>
+</head>
+<body>
+    <div id="question-container">
+        <div class="question-box" id="question-box"></div>
+        <div class="options-container" id="options-container"></div>
+    </div>
+
+    <!-- JavaScript 파일을 body 끝에 포함 -->
+    <script src="script.js"></script>
+</body>
+</html>

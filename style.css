@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px; /* 컨테이너 크기를 설정할 수 있습니다 */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.question-box {
+    margin-bottom: 30px;
+    width: 100%; /* 선택지를 컨테이너 너비에 맞추기 */
+}
+
+.question-box p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question-box label {
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 100%; /* 선택지 너비를 100%로 설정 */
+}
+
+.question-box label input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
+.question-box label span {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e0e0e0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.question-box label:hover span {
+    background-color: #d0d0d0;
+}
+
+.question-box label input[type="radio"]:checked + span {
+    background-color: #b0c4de;
+    border-color: #5c9ded;
+}
